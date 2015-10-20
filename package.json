@@ -3,20 +3,31 @@
   "version": "1.0.0",
   "description": "An isomorphic router for React.",
   "main": "dist/index.js",
-  "peerDependencies": {
-    "react": "^0.*"
-  },
   "dependencies": {
     "no-frills-router": "1.0.0",
     "extend": "^3.0.0"
   },
+  "peerDependencies": {
+    "react": "^0.*"
+  },
   "devDependencies": {
     "babel": "^5.8.23",
-    "react": "^0.14.0"
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jameslnewell/cianca.git"
   },
   "scripts": {
-    "build": "babel ./index.js ./lib/*.js ./lib/**/*.js -d ./dist",
-    "test": "mocha"
+    "prepublish": "npm run build",
+    "build": "babel -s -d ./dist ./index.js ./lib/*.js ./lib/**/*.js",
+    "test": "mocha",
+    "example.build": "browserify --debug -t babelify example/index.js -o example/index.bundled.js",
+    "example.watch": "watchify --debug -t babelify example/index.js -o example/index.bundled.js",
+    "example.serve": "http-server ./example"
   },
   "license": "MIT"
 }
