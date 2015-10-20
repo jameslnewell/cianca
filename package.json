@@ -1,0 +1,18 @@
+{
+  "name": "cianca",
+  "version": "1.0.0",
+  "description": "An isomorphic router for React.",
+  "main": "dist/index.js",
+  "dependencies": {
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "react": "^0.14.0"
+  },
+  "scripts": {
+    "build": "babel ./index.js ./lib/*.js ./lib/**/*.js -d ./dist",
+    "test": "mocha"
+  },
+  "license": "MIT"
+}
