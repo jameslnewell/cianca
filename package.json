@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "An isomorphic router for React.",
   "main": "dist/index.js",
+  "peerDependencies": {
+    "react": "^0.*"
+  },
   "dependencies": {
+    "no-frills-router": "1.0.0",
     "extend": "^3.0.0"
   },
   "devDependencies": {
