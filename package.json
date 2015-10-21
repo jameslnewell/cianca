@@ -1,6 +1,6 @@
 {
   "name": "cianca",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An isomorphic router for React.",
   "keywords": [
     "router",
@@ -24,7 +24,9 @@
     "babelify": "^6.3.0",
     "browserify": "^11.2.0",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "static-server": "^2.0.0",
+    "superstatic": "^3.0.0"
   },
   "repository": {
     "type": "git",
@@ -36,7 +38,7 @@
     "test": "mocha",
     "example.build": "browserify --debug -t babelify example/index.js -o example/index.bundled.js",
     "example.watch": "watchify --debug -t babelify example/index.js -o example/index.bundled.js",
-    "example.serve": "http-server ./example"
+    "example.serve": "superstatic -c ./example/superstatic.json"
   },
   "license": "MIT"
 }

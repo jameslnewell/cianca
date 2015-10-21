@@ -1,9 +1,9 @@
-import Router from './lib/router';
+import router from './lib/router';
 import Link from './lib/components/Link';
 import Route from './lib/components/Route';
-import Component from './lib/components/Router';
+import Router from './lib/components/Router';
 
-export default Router;
+export default router;
 export {Link as Link};
 export {Route as Route};
-export {Component as Router};
+export {Router as Router};
